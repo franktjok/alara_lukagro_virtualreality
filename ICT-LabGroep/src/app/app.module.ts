@@ -12,8 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 
-import { Camera } from '@ionic-native/Camera/ngx';
-import { File } from '@ionic-native/File/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 
 import { AngularFireModule } from 'angularfire2';

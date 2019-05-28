@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/Camera/ngx';
+import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/camera/ngx';
 import { ActionSheetController, ToastController, Platform, LoadingController } from '@ionic/angular';
-import { File, FileEntry } from '@ionic-native/File/ngx';
+import { File, FileEntry } from '@ionic-native/file/ngx';
 import { HttpClient } from '@angular/common/http';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { Storage } from '@ionic/storage';
@@ -90,7 +90,7 @@ export class UploadPage implements OnInit {
         var options: CameraOptions = {
             quality: 100,
             sourceType: sourceType,
-            saveToPhotoAlbum: false,
+            saveToPhotoAlbum: true,
             correctOrientation: true
         };
 
