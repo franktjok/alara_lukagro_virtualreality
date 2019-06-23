@@ -16,9 +16,10 @@ export class AppComponent {
 
   public appMenu = [
     {title: 'Home', url: '/home', icon: 'list'},
-    {title: 'Projecten', url: '/upload', icon: 'add'},
+   /** {title: 'Projecten', url: '/upload', icon: 'add'},**/
     /**{title: 'Member', url: '/user', icon: 'contact'},**/
-    {title: 'VR', url: '/web-vr', icon: 'md-eye'},
+    /**{title: 'Projecten', url: '/web-vr', icon: 'md-eye'},**/
+    {title: 'Projecten', url: '/project', icon: 'contact' }
 
   ]
   @ViewChild(NavController) nav: NavController;

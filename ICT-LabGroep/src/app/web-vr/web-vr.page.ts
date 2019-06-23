@@ -4,6 +4,9 @@ import * as THREE from 'three';
 import * as webvrui from 'webvr-ui';
 import VRControls from 'three-vrcontrols-module';
 import VREffect from 'three-vreffect-module';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
 
 @Component({
   selector: 'app-web-vr',
@@ -27,10 +30,22 @@ export class WebVRPage implements OnInit {
       private cube: THREE.Mesh;
       private animationDisplay;
       private enterVR;
+      public isAdmin = false;
 
   constructor(private element: ElementRef, private ngRenderer: Renderer2) { }
 
   ngOnInit() {
+             firebase.auth().onAuthStateChanged(user => {
+                                if (user){
+                                     firebase
+                                         .firestore()
+                                         .doc(`/userProfile/${user.uid}`)
+                                         .get()
+                                         .then(userProfileSnapshot => {
+                                             this.isAdmin = userProfileSnapshot.data().isAdmin;
+                                             });
+                                 }
+                                });
 
             this.renderer = new THREE.WebGLRenderer({antialias: false, canvas: this.cubeCanvas.nativeElement});
             this.controls = new VRControls(this.camera);
@@ -62,6 +77,8 @@ export class WebVRPage implements OnInit {
             window.addEventListener('vrdisplaypresentchange', () => {
                 this.onResize();
             });
+
+
   }
 
   initScene(texture): void {

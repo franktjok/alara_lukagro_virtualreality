@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
   { path: 'user', loadChildren: './user/user.module#UserPageModule'},  { path: 'web-vr', loadChildren: './web-vr/web-vr.module#WebVRPageModule' },
+  { path: 'project', loadChildren: './project/project.module#ProjectPageModule' },
 
 
 ];

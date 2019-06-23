@@ -9,9 +9,13 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-button *ngIf="isAdmin" expand="block" routerLink="/upload" routerDirection="root">
+    &nbsp;Project Toevoegen
+  </ion-button>
+
   <div id="canvas-container">
-    <iframe src="/assets/aframe1.html"></iframe>
-    <iframe src="/assets/landschap.html"></iframe>
-    <iframe src="/assets/rome.html"></iframe>
+    <iframe src="/assets/aframe1.html" style="height: 30vh; width: 100%;"></iframe>
+    <iframe src="/assets/landschap.html" style="height: 30vh; width: 100%;"></iframe>
+    <iframe src="/assets/rome.html" style="height: 30vh; width: 100%;"></iframe>
   </div>
 </ion-content>

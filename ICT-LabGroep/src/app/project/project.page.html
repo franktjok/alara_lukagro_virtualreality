@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+      <ion-title>
+        <img class="title-image" alt="logo" height="50"   src="/assets/images/Al1.png" > PROJECTEN</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!--  <ion-button *ngIf="isAdmin" expand="block" routerLink="/upload" routerDirection="root">
+      &nbsp;Project Toevoegen
+    </ion-button>-->
+
+  <ion-button *ngIf="isAdmin" expand="block" (click)="addProjects()">
+    <ion-icon name="md-add"></ion-icon>
+   <!-- <ion-badge color="dark" slot="end">Projecten Toevoegen </ion-badge>-->Projecten Toevoegen
+  </ion-button>
+
+  <!--<ion-button  expand="block" (click)="getAllImages()">
+    <ion-icon name="md-add"></ion-icon>
+    <!--<ion-badge color="dark" slot="end">Projecten Toevoegen </ion-badge>Get Image
+  </ion-button>-->
+
+
+  <!--  <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>-->
+    <button ion-button (click)="upload()" *ngIf="captureDataUrl">Upload to Firebase!</button>
+  <div id="canvas-container">
+    <ion-card><iframe src="/assets/aframe1.html" style="height: 30vh; width: 100%;"></iframe></ion-card>
+
+    <ion-card><iframe src="/assets/landschap.html" style="height: 30vh; width: 100%;"></iframe></ion-card>
+    <ion-card><iframe src="/assets/rome.html" style="height: 30vh; width: 100%;"></iframe></ion-card>
+   <!-- <ion-card><iframe src="/assets/test.html" style="height: 30vh; width: 100%;"></iframe></ion-card>-->
+    <!--<iframe src="/assets/vr.html" style="height: 30vh; width: 100%;"></iframe>-->
+
+    <!--<iframe src="captureDataUrl" *ngIf="captureDataUrl" style="height: 30vh; width: 100%;"></iframe>-->
+  </div>
+</ion-content>

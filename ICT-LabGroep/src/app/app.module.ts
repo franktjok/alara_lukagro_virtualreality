@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Camera } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 
 import { AngularFireModule } from 'angularfire2';
@@ -22,10 +23,12 @@ import { firebaseConfig } from '../config';
 import { AuthService } from '../services/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxErrorsModule } from '@ultimate/ngxerrors';
+import { SettingComponent } from './setting/setting.component';
+import { UploadPage } from './upload/upload-new.page'
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, SettingComponent, UploadPage],
+  entryComponents: [SettingComponent, UploadPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireModule.initializeApp(firebaseConfig.fire), FormsModule, ReactiveFormsModule, NgxErrorsModule, IonicStorageModule.forRoot(), HttpClientModule],
   providers: [
     StatusBar,
@@ -33,6 +36,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     Camera,
     File,
+    FilePath,
     WebView,
     AngularFireAuth,
     AuthService,
