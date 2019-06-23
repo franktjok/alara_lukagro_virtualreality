@@ -1,10 +1,10 @@
 export const firebaseConfig= {
   // Initialize Firebase
     fire:{
-      apiKey: "AIzaSyDKfHWTugxQGHxN4vLdFIRhkp1syBcset8",
-      authDomain: "team-iconic.firebaseapp.com",
-      databaseURL: "https://team-iconic.firebaseio.com",
-      projectId: "team-iconic",
-      storageBucket: "team-iconic.appspot.com",
-      messagingSenderId: "192137035587"
+      apiKey: "AIzaSyDyRr2oQP79veuN0ELafZlygNmCLunKVVQ",
+      authDomain: "virtual-reality-a0b54.firebaseapp.com",
+      databaseURL: "https://virtual-reality-a0b54.firebaseio.com",
+      projectId: "virtual-reality-a0b54",
+      storageBucket: "virtual-reality-a0b54.appspot.com",
+      messagingSenderId: "309121550205"
 }};
