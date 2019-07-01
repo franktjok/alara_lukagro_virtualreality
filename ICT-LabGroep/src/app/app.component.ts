@@ -47,7 +47,7 @@ export class AppComponent {
               if (user) {
                 this.rootPage = this.navCtrl.navigateRoot('/home');
               } else {
-                this.rootPage = this.navCtrl.navigateRoot('/login');
+                this.rootPage = this.navCtrl.navigateRoot('/project');
               }
             },
             () => {
